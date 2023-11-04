@@ -113,7 +113,7 @@ class IkeaTradfriRemote2Btn(CustomDevice):
     device_automation_triggers = {
         (SHORT_PRESS, TURN_ON): {COMMAND: COMMAND_ON, CLUSTER_ID: 6, ENDPOINT_ID: 1},
         (LONG_PRESS, DIM_UP): {
-            COMMAND: COMMAND_MOVE_ON_OFF,
+            COMMAND: COMMAND_MOVE,
             CLUSTER_ID: 8,
             ENDPOINT_ID: 1,
             PARAMS: {"move_mode": 0},
@@ -131,7 +131,7 @@ class IkeaTradfriRemote2Btn(CustomDevice):
             PARAMS: {"move_mode": 1},
         },
         (LONG_RELEASE, DIM_DOWN): {
-            COMMAND: COMMAND_STOP,
+            COMMAND: COMMAND_STOP_ON_OFF,
             CLUSTER_ID: 8,
             ENDPOINT_ID: 1,
         },
